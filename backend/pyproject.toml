@@ -9,15 +9,13 @@ dependencies = [
     "uvicorn[standard]",
     "sqlalchemy",
     "asyncpg",
-    "alembic",
     "pydantic",
     "python-dotenv",
     "jinja2",
     "httpx",
-    "aiofiles",         # для работы со static/templates
-    "email-validator",  # если нужна валидация email в Pydantic
-    pydantic,
-    pydantic-settings,
-    greenlet,
-    sqlalchemy-utils
+    "aiofiles",
+    "email-validator",
+    "pydantic-settings",
+    "greenlet",
+    "sqlalchemy-utils"
 ]

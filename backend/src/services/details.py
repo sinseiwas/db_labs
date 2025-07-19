@@ -14,3 +14,7 @@ class DetailService:
     async def get_details(self):
         details = await self.detail_repo.find_all()
         return details
+    
+    async def get_detail(self, detail_id):
+        detail = self.detail_repo.find_one(id=detail_id)
+        return detail

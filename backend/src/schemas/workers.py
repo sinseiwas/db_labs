@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class WorkerSchema(BaseModel):
     id: int
@@ -11,7 +11,7 @@ class WorkerSchema(BaseModel):
     speciality: str
     #  Год принятия на работу
     hire_year: int
-    rank: int
+    rank: int = Field(ge=1)
 
 
 class WorkerAddSchema(BaseModel):
@@ -22,4 +22,4 @@ class WorkerAddSchema(BaseModel):
     passport_number: int
     speciality: str
     hire_year: int
-    rank: int
+    rank: int = Field(ge=1)

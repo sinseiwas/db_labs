@@ -6,6 +6,7 @@ from repositories.workers import WorkerRepository
 from services.details import DetailService
 from services.works import WorksService
 from services.tasks import TaskService
+from services.workers import WorkerService
 
 def details_service() -> DetailService:
     return DetailService(DetailsRepository)
@@ -15,3 +16,6 @@ def works_service():
 
 def tasks_service():
     return TaskService(TaskRepository)
+
+def workers_service():
+    return WorkerService(WorkerRepository)
